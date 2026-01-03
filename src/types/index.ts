@@ -63,3 +63,18 @@ export interface DataProps {
   }[];
   award: AwardProps[];
 }
+
+export interface ProjectProps {
+  id: number;
+  name: string;
+  description: string; // 회색 박스에 들어갈 요약글
+  body?: string;       // 아래쪽에 나올 상세 설명 (불렛 포인트 등)
+  webUrl: string;
+  repoUrl: string;
+  isTeam: boolean;
+  period: string[];
+  stack: string[];
+  imgSrc: string;
+}
+
+// ... 나머지 코드는 그대로 유지

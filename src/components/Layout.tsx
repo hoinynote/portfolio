@@ -1,8 +1,15 @@
-const Layout = ({ children }: { children: React.ReactNode }) => {
+import React, { ReactNode } from "react";
+
+type LayoutProps = {
+  children: ReactNode;
+};
+
+const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="max-w-4xl mx-auto p-8 flex flex-col gap-28 md:gap-32 md:my-20 my-4 mb-20">
+    // [수정] max-w-7xl -> max-w-5xl (너비를 적절히 줄여 안정감 확보)
+    <main className="container mx-auto max-w-5xl px-6 md:px-8 min-h-screen">
       {children}
-    </div>
+    </main>
   );
 };
 

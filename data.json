@@ -7,86 +7,93 @@
     "contact": [
       { "id": 0, "name": "Email", "href": "mailto:ghdls3070@naver.com", "isEmail": true }
     ],
-    "markdown": "**\"화려한 분석 결과도, 결국 정확한 데이터 한 줄에서 시작됩니다.\"**\n\n산업정보시스템공학을 전공하며 시스템 전체를 조망하는 눈을 길렀고, 수많은 데이터가 흐르는 파이프라인을 구축하며 디테일의 중요성을 배웠습니다.\n\n누군가는 '지루하다'고 할 수 있는 데이터 정제와 적재 과정이, 저에게는 비즈니스의 심장을 뛰게 하는 가장 역동적인 일입니다. 장애가 발생하지 않는 편안한 시스템을 만들기 위해, 보이지 않는 곳에서 가장 치열하게 고민하는 엔지니어가 되겠습니다."
+    "markdown": "### **화려한 결과보다 '신뢰할 수 있는 데이터'의 가치를 믿습니다.**\n데이터 분석가와 의사결정자가 **'이 데이터 믿어도 되나요?'**라고 되묻지 않게 만드는 것이 저의 목표입니다. 화려한 알고리즘이나 분석 기법도 결국 정확한 데이터 없이는 무용지물임을 잘 알고 있습니다. 그렇기에 저는 보이지 않는 곳에서 데이터 정합성을 검증하고, 장애가 발생하지 않는 **견고한 파이프라인(Robust Pipeline)**을 구축하는 일에 집요하게 매달립니다. 누군가는 지루하다고 느낄 수 있는 데이터 정제와 품질 관리 과정이, 저에게는 비즈니스의 기반을 다지는 가장 숭고한 작업입니다.\n\n### **전체를 조망하는 '최적화 사고'로 시스템을 설계합니다.**\n산업정보시스템공학을 전공하며 복잡한 공정의 병목을 찾아내고 전체 효율을 높이는 **'최적화 마인드'**를 체득했습니다. 저는 데이터 파이프라인을 단순한 코드의 집합이 아니라, 데이터가 생성되어 활용되기까지의 **유기적인 생산 공정**으로 바라봅니다. 불필요한 연산을 줄여 클라우드 비용을 절감하고, 데이터 적재 지연(Latency)을 최소화하여 시스템 전체의 효율을 높이는 데 강점이 있습니다.\n\n### **비즈니스의 속도를 높이는 엔지니어링을 지향합니다.**\n데이터는 적재된 순간에는 가치가 없습니다. **필요한 순간에, 필요한 사람에게 전달될 때** 비로소 가치가 생깁니다. 저는 기술 자체에 매몰되기보다 **\"이 데이터가 비즈니스 문제를 해결하는 데 얼마나 빠르게 기여하는가?\"**를 먼저 고민합니다. 현업 부서가 데이터 추출을 기다리느라 의사결정 타이밍을 놓치는 일이 없도록, 속도감 있고 접근성 높은 데이터 인프라를 만드는 일에 주도적으로 기여하겠습니다."
   },
   "workExperience": [],
   "project": [
     {
-      "id": 0,
-      "name": "중고 거래 플랫폼 데이터베이스 설계",
-      "description": "중고 거래 서비스 시나리오를 기반으로 데이터베이스 구조를 설계하고 정규화 및 무결성을 고려한 ERD를 설계한 팀 프로젝트",
-      "webUrl": "",
-      "repoUrl": "",
-      "isTeam": true,
-      "period": ["2022. 11", "2022. 11"],
-      "stack": ["SQL Server", "ERD", "Database Modeling", "Normalization"],
-      "imgSrc": "/images/project/0.png"
-    },
-    {
-      "id": 1,
-      "name": "당뇨병 예측 머신러닝 모델 구축",
-      "description": "의료 데이터를 활용해 당뇨병 발병 가능성을 예측하는 머신러닝 모델을 구축하고 성능을 비교·분석한 팀 프로젝트",
-      "webUrl": "",
-      "repoUrl": "",
-      "isTeam": true,
-      "period": ["2023. 03", "2023. 06"],
-      "stack": ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib"],
-      "imgSrc": "/images/project/1.png"
-    },
-    {
-      "id": 2,
-      "name": "무인판매점 도난방지 프로세스 개선 모델링",
-      "description": "Bizagi를 활용해 무인판매점 도난 대응 프로세스를 분석하고 개선된 TO-BE 프로세스를 설계한 팀 프로젝트",
-      "webUrl": "",
-      "repoUrl": "",
-      "isTeam": true,
-      "period": ["2023. 03", "2023. 06"],
-      "stack": ["Bizagi", "Business Process Modeling", "Process Analysis"],
-      "imgSrc": "/images/project/2.png"
-    },
-    {
-      "id": 3,
-      "name": "중증 외상 환자를 위한 권역 외상 센터 입지 분석",
-      "description": "응급의료 취약 지역을 분석하여 권역 외상 센터 입지 선정과 닥터헬기 필요성을 데이터 기반으로 도출한 팀 프로젝트",
-      "webUrl": "",
-      "repoUrl": "",
-      "isTeam": true,
-      "period": ["2023. 09", "2023. 12"],
-      "stack": ["R", "Data Visualization", "Geospatial Analysis", "Public Data Analysis"],
-      "imgSrc": "/images/project/3.png"
-    },
-    {
-      "id": 4,
-      "name": "영화 추천 시스템 구축",
-      "description": "사용자 평점 데이터를 기반으로 협업 필터링 기법을 활용한 영화 추천 시스템을 구현한 팀 프로젝트",
-      "webUrl": "",
-      "repoUrl": "",
-      "isTeam": true,
-      "period": ["2024. 01", "2024. 02"],
-      "stack": ["Python", "Recommendation System", "Collaborative Filtering", "Pandas"],
-      "imgSrc": "/images/project/4.png"
-    },
-    {
-      "id": 5,
-      "name": "실시간 고객 데이터 분석 RAG 시스템",
-      "description": "실시간 고객 데이터를 분석하고 RAG 기반 질의 응답이 가능한 분석 시스템을 구축한 팀 프로젝트",
-      "webUrl": "",
-      "repoUrl": "",
-      "isTeam": true,
-      "period": ["2024. 03", "2024. 04"],
-      "stack": ["Azure", "Databricks", "RAG", "LLM", "Data Pipeline"],
-      "imgSrc": "/images/project/5.png"
-    },
-    {
       "id": 6,
       "name": "메기스터디 데이터 분석 및 서비스 개선",
-      "description": "학습 서비스 데이터를 분석하여 사용자 행동 패턴을 도출하고 서비스 개선 방향을 제안한 팀 프로젝트",
+      "description": "교육 플랫폼의 파편화된 데이터를 통합하여 데이터 사일로 문제를 해결하고, 이탈 위험군을 조기에 감지할 수 있는 분석 환경을 구축한 프로젝트입니다.",
+      "body": "### **학습 데이터 통합으로 이탈률 감소에 기여했습니다.**\n\n- **Azure Data Factory 기반의 통합 파이프라인 구축**\n  - 학습 로그(DB), 결제 정보(API), 상담 내역(CSV) 등 다양한 소스의 데이터를 Azure Data Lake Storage Gen2로 통합\n  - 매일 발생하는 수 GB의 데이터를 처리하기 위해 **파티셔닝(Partitioning)** 전략을 적용하여 쿼리 성능 최적화\n\n- **이탈 위험군 탐지 모델 구현**\n  - Spark(Databricks)를 활용해 '최근 접속일', '진도율', '테스트 점수' 등의 피처를 추출하고 이탈 위험 점수 산출\n  - Power BI와 연동하여 마케팅 팀이 즉각적으로 활용 가능한 **시각화 대시보드** 배포\n\n### **성과**\n- 데이터 분석 준비 시간 **40% 단축** (기존 수동 취합 대비)\n- 이탈 위험군 타겟 프로모션을 위한 데이터 근거 마련",
       "webUrl": "",
       "repoUrl": "",
       "isTeam": true,
       "period": ["2024. 05", "2024. 06"],
-      "stack": ["Azure", "Databricks", "Data Analysis", "Visualization"],
+      "stack": ["Azure Synapse", "Spark", "Power BI", "ADF"],
       "imgSrc": "/images/project/6.png"
+    },
+    {
+      "id": 5,
+      "name": "실시간 고객 데이터 분석 RAG 시스템",
+      "description": "고객 상담 로그를 실시간으로 분석하고 사내 규정을 기반으로 답변을 생성하여, 상담원의 검색 시간을 획기적으로 단축하고 정확도를 높인 RAG 시스템입니다.",
+      "body": "### **상담원을 위한 실시간 AI 어시스턴트를 구축했습니다.**\n\n- **초당 1,000건 이상의 로그 처리를 위한 스트리밍 아키텍처**\n  - Azure Event Hubs와 Stream Analytics를 활용하여 상담 로그를 지연 없이 수집하고 분석하는 파이프라인 구축\n  - 실시간 키워드 추출을 통해 상담 트렌드를 모니터링할 수 있는 구조 설계\n\n- **정확도 높은 답변을 위한 RAG(검색 증강 생성) 구현**\n  - LangChain과 Vector DB를 활용해 사내 매뉴얼을 임베딩하고, 질문과 관련된 문맥을 LLM에 주입\n  - **환각(Hallucination)** 현상을 억제하기 위해 프롬프트 엔지니어링 및 답변 근거(Source) 표기 기능 구현\n\n### **성과**\n- 상담원 정보 검색 시간 평균 **5분 → 30초로 단축**\n- 데이터 최신성(Data Freshness) **1분 이내** 유지",
+      "webUrl": "",
+      "repoUrl": "",
+      "isTeam": true,
+      "period": ["2024. 03", "2024. 04"],
+      "stack": ["Azure Databricks", "LangChain", "Vector DB"],
+      "imgSrc": "/images/project/5.png"
+    },
+    {
+      "id": 4,
+      "name": "영화 추천 시스템 구축",
+      "description": "협업 필터링과 콘텐츠 기반 필터링을 결합한 하이브리드 추천 시스템으로, 신규 유저의 콜드 스타트 문제를 해결하고 개인화된 추천을 제공했습니다.",
+      "body": "### **콜드 스타트 문제를 해결한 하이브리드 추천 엔진입니다.**\n\n- **신규 유저를 위한 콘텐츠 기반 필터링(CBF)**\n  - 가입 초기 데이터가 부족한 시점에는 사용자가 선택한 선호 장르/태그와 유사한 영화를 추천하는 로직 적용\n\n- **대규모 행렬 분해(Matrix Factorization) 적용**\n  - Scikit-learn의 ALS 알고리즘을 사용하여 사용자-영화 평점 행렬의 희소성(Sparsity) 문제 해결\n  - 하이퍼파라미터 튜닝을 통해 **RMSE 0.87** 달성, 추천 정확도 확보\n\n### **성과**\n- 추천 시스템의 정확도(RMSE) **0.87** 달성\n- Python 기반의 추천 모듈화 및 API 서빙 환경 구축",
+      "webUrl": "",
+      "repoUrl": "",
+      "isTeam": true,
+      "period": ["2024. 01", "2024. 02"],
+      "stack": ["Python", "Scikit-learn", "FastAPI"],
+      "imgSrc": "/images/project/4.png"
+    },
+    {
+      "id": 3,
+      "name": "중증 외상 센터 입지 선정 분석",
+      "description": "골든타임 확보가 시급한 중증 외상 환자를 위해 공간 데이터 분석(GIS)을 수행하고, P-Median 알고리즘으로 최적의 외상 센터 입지를 도출했습니다.",
+      "body": "### **데이터 기반으로 생명을 살리는 최적의 입지를 제안했습니다.**\n\n- **공간 데이터(GIS) 분석 및 시각화**\n  - QGIS를 활용해 도로 네트워크, 인구 밀도, 기존 응급 의료 시설 위치 등 이종 데이터를 결합\n  - 응급 의료 취약 지역을 히트맵(Heatmap)으로 시각화하여 분석 대상 지역 선정\n\n- **입지 최적화 모델링**\n  - '모든 환자의 평균 이동 시간 최소화'를 목표 함수로 설정한 P-Median 모델 적용\n  - 최적화 솔버를 통해 기존 시설 대비 접근성이 획기적으로 개선되는 후보지 2곳 선정\n\n### **성과**\n- 기존 대비 평균 이송 시간 **15% 단축** 가능한 모델 제시\n- 공공 데이터 활용 경진대회 입상 (예시)",
+      "webUrl": "",
+      "repoUrl": "",
+      "isTeam": true,
+      "period": ["2023. 09", "2023. 12"],
+      "stack": ["R", "QGIS", "Tableau", "Geospatial Analysis"],
+      "imgSrc": "/images/project/3.png"
+    },
+    {
+      "id": 2,
+      "name": "무인판매점 도난방지 프로세스 개선",
+      "description": "무인 매장의 도난 대응 프로세스를 분석하고, IoT 센서와 자동 알림 시스템을 도입하여 도난 대응 시간을 단축하는 TO-BE 프로세스를 설계했습니다.",
+      "body": "### **프로세스 마이닝으로 운영 리스크를 줄였습니다.**\n\n- **AS-IS 프로세스 병목 분석**\n  - Bizagi를 활용해 기존의 수동적인 CCTV 모니터링 및 신고 절차를 모델링\n  - 도난 발생부터 신고까지 평균 3시간이 소요되는 문제점과 병목 구간 식별\n\n- **IoT 기반 자동화 프로세스(TO-BE) 설계**\n  - 매장 내 센서가 이상 행동 감지 시 경고 방송 송출 및 관리자 앱 알림 자동화\n  - 경찰 신고 연동 프로세스를 BPMN 표준으로 설계\n\n### **성과**\n- 도난 대응 예상 소요 시간 **70% 단축** 모델 제시\n- 24시간 모니터링 인력 비용 절감 효과 분석",
+      "webUrl": "",
+      "repoUrl": "",
+      "isTeam": true,
+      "period": ["2023. 03", "2023. 06"],
+      "stack": ["Bizagi", "Process Mining", "BPMN"],
+      "imgSrc": "/images/project/2.png"
+    },
+    {
+      "id": 1,
+      "name": "당뇨병 예측 머신러닝 모델",
+      "description": "건강 검진 데이터를 활용하여 당뇨병 발병 위험을 예측하는 분류 모델입니다. SMOTE로 데이터 불균형을 해결하고 앙상블 기법으로 예측 성능을 높였습니다.",
+      "body": "### **불균형 데이터를 극복하고 예측 성능을 높였습니다.**\n\n- **데이터 불균형 해결 (SMOTE)**\n  - 당뇨병 환자(Positive) 데이터가 적은 문제를 해결하기 위해 SMOTE 기법으로 소수 클래스 오버샘플링\n  - 모델이 다수 클래스(정상)에 편향되지 않도록 학습 데이터 균형 확보\n\n- **앙상블 모델링 및 튜닝**\n  - XGBoost와 Random Forest를 결합한 앙상블 모델 구축\n  - Grid Search로 최적의 하이퍼파라미터를 탐색하여 F1-Score 최적화\n\n### **성과**\n- 최종 모델 정확도 **92%** 달성\n- 주요 발병 요인(Feature Importance) 도출로 예방 가이드라인 제시",
+      "webUrl": "",
+      "repoUrl": "",
+      "isTeam": true,
+      "period": ["2023. 03", "2023. 06"],
+      "stack": ["Python", "XGBoost", "Pandas", "Scikit-learn"],
+      "imgSrc": "/images/project/1.png"
+    },
+    {
+      "id": 0,
+      "name": "중고 거래 플랫폼 DB 설계",
+      "description": "대규모 트래픽을 고려하여 중고 거래 플랫폼의 데이터베이스를 설계했습니다. 제3정규형을 적용해 무결성을 확보하고 인덱스 최적화로 쿼리 성능을 높였습니다.",
+      "body": "### **성능과 무결성을 고려한 RDB 설계 프로젝트입니다.**\n\n- **논리적/물리적 데이터베이스 모델링**\n  - 요구사항 분석을 통해 회원, 상품, 거래, 채팅 등 핵심 엔티티 도출\n  - 제3정규형(3NF)까지 정규화를 수행하여 데이터 중복 및 이상 현상(Anomaly) 방지\n\n- **쿼리 성능 최적화**\n  - '지역별 상품 검색', '카테고리 필터링' 등 빈번한 조회 쿼리를 분석하여 복합 인덱스(Composite Index) 설계\n  - 실행 계획(Execution Plan) 분석을 통해 Full Table Scan을 최소화\n\n### **성과**\n- 엔티티 20개 이상의 **ERD 설계 및 DDL 스크립트 작성**\n- 주요 비즈니스 시나리오에 대한 **SQL 쿼리 20종 검증**",
+      "webUrl": "",
+      "repoUrl": "",
+      "isTeam": true,
+      "period": ["2022. 11", "2022. 11"],
+      "stack": ["MS SQL Server", "ERD Cloud", "Database Modeling"],
+      "imgSrc": "/images/project/0.png"
     }
   ],
   "activity": [],
