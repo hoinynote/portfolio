@@ -8,17 +8,17 @@ import Footer from "@/components/Footer";
 import Layout from "@/components/Layout";
 import ResumeTitle from "@/components/ResumeTitle";
 import ProjectItem from "@/components/Project/ProjectItem";
-import { DataProps, ProjectProps, WorkExperienceProps } from "@/types";
+import { DataProps, ProjectProps } from "@/types"; // WorkExperienceProps 제거
 
 const Home: NextPage<DataProps> = ({
   resumeTitle,
   information,
-  workExperience,
+  // workExperience, // 사용하지 않으므로 제거 (Lint 에러 방지)
   project,
-  activity,
+  // activity, // 사용하지 않으므로 제거
   education,
-  certificate,
-  award,
+  // certificate, // 사용하지 않으므로 제거
+  // award, // 사용하지 않으므로 제거
 }) => {
   const featuredProjects = project.slice(0, 3);
   const otherProjects = project.slice(3);
@@ -32,7 +32,6 @@ const Home: NextPage<DataProps> = ({
         {/* Intro Section */}
         <section className="pt-8 pb-20 animate-fade-in-up">
           
-          {/* 포부 문구: 아주 진하고 선명하게 */}
           <div className="mb-16">
             <h1 className="text-3xl md:text-5xl font-black text-black dark:text-white leading-tight tracking-tight">
               데이터의 무게를 견디는 <br />
@@ -58,7 +57,6 @@ const Home: NextPage<DataProps> = ({
             {/* [오른쪽] 정보 영역 */}
             <div className="flex-1 w-full flex flex-col gap-8 pt-2">
               
-              {/* 이름 및 직무 */}
               <div className="border-b-2 border-black dark:border-white pb-6">
                 <h2 className="text-4xl font-black text-black dark:text-white mb-2 tracking-tight">
                   유호인
@@ -68,12 +66,10 @@ const Home: NextPage<DataProps> = ({
                 </p>
               </div>
 
-              {/* 기본 정보: 글씨를 진하게 변경 */}
               <div className="flex flex-col gap-4">
                 <h3 className="font-bold text-black dark:text-white text-sm uppercase tracking-wider mb-1">
                   기본 정보
                 </h3>
-                {/* 텍스트 색상을 zinc-800(진한 회색)으로 변경하여 가독성 강화 */}
                 <div className="grid grid-cols-[80px_1fr] gap-y-3 text-base text-zinc-900 dark:text-zinc-200 font-medium">
                   <span className="font-bold text-zinc-500 dark:text-zinc-500">생년월일</span>
                   <span>1998. 04. 13</span>
@@ -91,7 +87,7 @@ const Home: NextPage<DataProps> = ({
             </div>
           </div>
 
-          {/* 2. 학력 (Education) - 설명 제거 및 가독성 강화 */}
+          {/* Education */}
           <div className="mb-24">
             <h3 className="text-2xl font-black text-black dark:text-white border-b-2 border-black dark:border-white pb-4 mb-8">
               Education
@@ -100,26 +96,22 @@ const Home: NextPage<DataProps> = ({
             <div className="flex flex-col gap-6">
               {education.map((edu) => (
                 <div key={edu.id} className="flex flex-col md:flex-row md:justify-between md:items-end border-b border-gray-200 dark:border-zinc-800 pb-4 last:border-0">
-                  {/* 학교명: 아주 진하게 */}
                   <h4 className="text-xl md:text-2xl font-bold text-black dark:text-white tracking-tight">
                     {edu.name}
                   </h4>
-                  {/* 기간: 폰트 조금 키우고 진하게 */}
                   <span className="font-mono text-zinc-600 dark:text-zinc-400 text-sm md:text-base font-medium whitespace-nowrap mt-1 md:mt-0">
                     {edu.period[0]} ~ {edu.period[1]}
                   </span>
-                  {/* description 부분 삭제됨 */}
                 </div>
               ))}
             </div>
           </div>
 
-          {/* 3. 자기소개 (About Me) - 본문 글씨 진하게 */}
+          {/* About Me */}
           <div className="mb-24">
             <h3 className="text-2xl font-black text-black dark:text-white border-b-2 border-black dark:border-white pb-4 mb-10">
               About Me
             </h3>
-            {/* prose-lg, text-black 적용으로 가독성 극대화 */}
             <div className="prose prose-lg dark:prose-invert max-w-none text-black dark:text-zinc-100 leading-relaxed font-medium">
               <ReactMarkdown>{information.markdown}</ReactMarkdown>
             </div>
@@ -127,7 +119,7 @@ const Home: NextPage<DataProps> = ({
 
         </section>
 
-        {/* 4. 주요 프로젝트 (Featured Projects) */}
+        {/* Featured Projects */}
         <section className="flex flex-col gap-10 mb-24">
           <div className="border-b-2 border-black dark:border-white pb-4">
             <h2 className="text-2xl font-black text-black dark:text-white mb-1">
@@ -145,7 +137,7 @@ const Home: NextPage<DataProps> = ({
           </div>
         </section>
 
-        {/* 5. 기타 프로젝트 (Additional Projects) */}
+        {/* Additional Projects */}
         <section className="flex flex-col gap-10 mb-24">
           <div className="border-b-2 border-black dark:border-white pb-4">
             <h2 className="text-xl font-black text-black dark:text-white mb-1">
@@ -175,15 +167,15 @@ export const getStaticProps = async () => {
   const filePath = path.join(process.cwd(), "data.json");
   const jsonData = await fsPromises.readFile(filePath, "utf8");
   const objectData = JSON.parse(jsonData);
-  const informationWithData = { ...objectData.information };
+  
+  // 데이터 가공 부분 (교육 설명 제거 로직 등은 불필요하므로 기본 구조 유지)
   const projectWithData = objectData.project.map(async (item: ProjectProps) => {
     return getImgSrc({ section: "project", item: await getMd({ section: "project", item }) });
   });
 
   return {
     props: {
-      ...objectData,
-      information: informationWithData,
+      ...objectData, // 모든 데이터를 넘기지만, 컴포넌트에서 필요한 것만 사용
       workExperience: [],
       project: await Promise.all(projectWithData),
     },
