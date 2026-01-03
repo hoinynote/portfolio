@@ -4,24 +4,24 @@ import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
 
 /**
- * @description SEO를 위해 본인의 정보로 수정해주세요.
+ * @description SEO 설정 (본인 정보에 맞게 수정 가능)
  */
 const DEFAULT_SEO = {
-  title: "홍길동 | Front-End Dev",
-  description: "안녕하세요, 프론트엔드 개발자 홍길동입니다.",
-  canonical: "https://www.naver.com/",
+  title: "유호인 | Data Engineer",
+  description: "안녕하세요, 데이터 엔지니어 유호인입니다.",
+  canonical: "https://your-portfolio-url.com/",
   openGraph: {
     type: "website",
     locale: "ko_KR",
-    url: "https://www.naver.com/",
-    title: "홍길동 | Front-End Dev",
-    site_name: "홍길동 | Front-End Dev",
+    url: "https://your-portfolio-url.com/",
+    title: "유호인 | Data Engineer",
+    site_name: "유호인 | Data Engineer",
     images: [
       {
         url: "/share.png",
         width: 285,
         height: 167,
-        alt: "홍길동 | Front-End Dev",
+        alt: "유호인 | Data Engineer",
       },
     ],
   },
@@ -31,27 +31,17 @@ const DEFAULT_SEO = {
       href: "/favicon.ico",
     },
   ],
-  additionalMetaTags: [
-    {
-      name: "application-name",
-      content: "홍길동 | Front-End Dev",
-    },
-    {
-      name: "msapplication-tooltip",
-      content: "홍길동 | Front-End Dev",
-    },
-    {
-      name: "viewport",
-      content: "width=device-width, initial-scale=1",
-    },
-  ],
 };
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <DefaultSeo {...DEFAULT_SEO} />
-      <ThemeProvider attribute="class">
+      {/* [핵심 수정] 
+        forcedTheme="dark": 사용자의 브라우저 테마와 상관없이 무조건 다크 모드로 고정합니다.
+        enableSystem={false}: 시스템 설정 감지를 끕니다.
+      */}
+      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} forcedTheme="dark">
         <Component {...pageProps} />
       </ThemeProvider>
     </>

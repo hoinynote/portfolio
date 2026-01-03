@@ -2,95 +2,25 @@
   "resumeTitle": {
     "title": "Yoo Ho In"
   },
-
   "information": {
     "name": "유호인",
     "contact": [
-      { "id": 0, "name": "Email", "href": "ghdls3070@naver.com", "isEmail": true },
-      { "id": 1, "name": "Github", "href": "https://github.com/honggildong" },
-      { "id": 2, "name": "Blog", "href": "https://velog.io/@honggildong" }
-    ]
+      { "id": 0, "name": "Email", "href": "mailto:ghdls3070@naver.com", "isEmail": true }
+    ],
+    "markdown": "**\"화려한 분석 결과도, 결국 정확한 데이터 한 줄에서 시작됩니다.\"**\n\n산업정보시스템공학을 전공하며 시스템 전체를 조망하는 눈을 길렀고, 수많은 데이터가 흐르는 파이프라인을 구축하며 디테일의 중요성을 배웠습니다.\n\n누군가는 '지루하다'고 할 수 있는 데이터 정제와 적재 과정이, 저에게는 비즈니스의 심장을 뛰게 하는 가장 역동적인 일입니다. 장애가 발생하지 않는 편안한 시스템을 만들기 위해, 보이지 않는 곳에서 가장 치열하게 고민하는 엔지니어가 되겠습니다."
   },
-
-  "workExperience": [
-
-  ],
-
+  "workExperience": [],
   "project": [
     {
-      "id": 6,
-      "name": "메기스터디 데이터 분석 및 서비스 개선",
-      "description": "학습 서비스 데이터를 분석하여 사용자 행동 패턴을 도출하고 서비스 개선 방향을 제안한 팀 프로젝트",
+      "id": 0,
+      "name": "중고 거래 플랫폼 데이터베이스 설계",
+      "description": "중고 거래 서비스 시나리오를 기반으로 데이터베이스 구조를 설계하고 정규화 및 무결성을 고려한 ERD를 설계한 팀 프로젝트",
       "webUrl": "",
       "repoUrl": "",
       "isTeam": true,
-      "period": ["2024. 00", "2024. 00"],
-      "stack": [
-        "Azure",
-        "Databricks",
-        "Data Analysis",
-        "Visualization"
-      ]
-    },
-    {
-      "id": 5,
-      "name": "실시간 고객 데이터 분석 RAG 시스템",
-      "description": "실시간 고객 데이터를 분석하고 RAG 기반 질의 응답이 가능한 분석 시스템을 구축한 팀 프로젝트",
-      "webUrl": "",
-      "repoUrl": "",
-      "isTeam": true,
-      "period": ["2024. 00", "2024. 00"],
-      "stack": [
-        "Azure",
-        "Databricks",
-        "RAG",
-        "LLM",
-        "Data Pipeline"
-      ]
-    },
-    {
-      "id": 4,
-      "name": "영화 추천 시스템 구축",
-      "description": "사용자 평점 데이터를 기반으로 협업 필터링 기법을 활용한 영화 추천 시스템을 구현한 팀 프로젝트",
-      "webUrl": "",
-      "repoUrl": "",
-      "isTeam": true,
-      "period": ["2024. 00", "2024. 00"],
-      "stack": [
-        "Python",
-        "Recommendation System",
-        "Collaborative Filtering",
-        "Pandas"
-      ]
-    },
-    {
-      "id": 3,
-      "name": "중증 외상 환자를 위한 권역 외상 센터 입지 분석",
-      "description": "응급의료 취약 지역을 분석하여 권역 외상 센터 입지 선정과 닥터헬기 필요성을 데이터 기반으로 도출한 팀 프로젝트",
-      "webUrl": "",
-      "repoUrl": "",
-      "isTeam": true,
-      "period": ["2023. 00", "2023. 00"],
-      "stack": [
-        "R",
-        "Data Visualization",
-        "Geospatial Analysis",
-        "Public Data Analysis"
-      ]
-    },
-    {
-      "id": 2,
-      "name": "무인판매점 도난방지 프로세스 개선 모델링",
-      "description": "Bizagi를 활용해 무인판매점 도난 대응 프로세스를 분석하고 개선된 TO-BE 프로세스를 설계한 팀 프로젝트",
-      "webUrl": "",
-      "repoUrl": "",
-      "isTeam": true,
-      "period": ["2023. 00", "2023. 00"],
-      "stack": [
-        "Bizagi",
-        "Business Process Modeling",
-        "Process Analysis"
-      ]
+      "period": ["2022. 11", "2022. 11"],
+      "stack": ["SQL Server", "ERD", "Database Modeling", "Normalization"],
+      "imgSrc": "/images/project/0.png"
     },
     {
       "id": 1,
@@ -99,58 +29,84 @@
       "webUrl": "",
       "repoUrl": "",
       "isTeam": true,
-      "period": ["2023. 00", "2023. 00"],
-      "stack": [
-        "Python",
-        "Pandas",
-        "NumPy",
-        "Scikit-learn",
-        "Matplotlib"
-      ]
+      "period": ["2023. 03", "2023. 06"],
+      "stack": ["Python", "Pandas", "NumPy", "Scikit-learn", "Matplotlib"],
+      "imgSrc": "/images/project/1.png"
     },
     {
-      "id": 0,
-      "name": "중고 거래 플랫폼 데이터베이스 설계",
-      "description": "중고 거래 서비스 시나리오를 기반으로 데이터베이스 구조를 설계하고 정규화 및 무결성을 고려한 ERD를 설계한 팀 프로젝트",
+      "id": 2,
+      "name": "무인판매점 도난방지 프로세스 개선 모델링",
+      "description": "Bizagi를 활용해 무인판매점 도난 대응 프로세스를 분석하고 개선된 TO-BE 프로세스를 설계한 팀 프로젝트",
       "webUrl": "",
       "repoUrl": "",
       "isTeam": true,
-      "period": ["2022. 00", "2022. 00"],
-      "stack": [
-        "SQL Server",
-        "ERD",
-        "Database Modeling",
-        "Normalization"
-      ]
+      "period": ["2023. 03", "2023. 06"],
+      "stack": ["Bizagi", "Business Process Modeling", "Process Analysis"],
+      "imgSrc": "/images/project/2.png"
+    },
+    {
+      "id": 3,
+      "name": "중증 외상 환자를 위한 권역 외상 센터 입지 분석",
+      "description": "응급의료 취약 지역을 분석하여 권역 외상 센터 입지 선정과 닥터헬기 필요성을 데이터 기반으로 도출한 팀 프로젝트",
+      "webUrl": "",
+      "repoUrl": "",
+      "isTeam": true,
+      "period": ["2023. 09", "2023. 12"],
+      "stack": ["R", "Data Visualization", "Geospatial Analysis", "Public Data Analysis"],
+      "imgSrc": "/images/project/3.png"
+    },
+    {
+      "id": 4,
+      "name": "영화 추천 시스템 구축",
+      "description": "사용자 평점 데이터를 기반으로 협업 필터링 기법을 활용한 영화 추천 시스템을 구현한 팀 프로젝트",
+      "webUrl": "",
+      "repoUrl": "",
+      "isTeam": true,
+      "period": ["2024. 01", "2024. 02"],
+      "stack": ["Python", "Recommendation System", "Collaborative Filtering", "Pandas"],
+      "imgSrc": "/images/project/4.png"
+    },
+    {
+      "id": 5,
+      "name": "실시간 고객 데이터 분석 RAG 시스템",
+      "description": "실시간 고객 데이터를 분석하고 RAG 기반 질의 응답이 가능한 분석 시스템을 구축한 팀 프로젝트",
+      "webUrl": "",
+      "repoUrl": "",
+      "isTeam": true,
+      "period": ["2024. 03", "2024. 04"],
+      "stack": ["Azure", "Databricks", "RAG", "LLM", "Data Pipeline"],
+      "imgSrc": "/images/project/5.png"
+    },
+    {
+      "id": 6,
+      "name": "메기스터디 데이터 분석 및 서비스 개선",
+      "description": "학습 서비스 데이터를 분석하여 사용자 행동 패턴을 도출하고 서비스 개선 방향을 제안한 팀 프로젝트",
+      "webUrl": "",
+      "repoUrl": "",
+      "isTeam": true,
+      "period": ["2024. 05", "2024. 06"],
+      "stack": ["Azure", "Databricks", "Data Analysis", "Visualization"],
+      "imgSrc": "/images/project/6.png"
     }
   ],
-
-  "activity": [
-
-  ],
-
+  "activity": [],
   "education": [
     {
-          
       "id": 0,
-      "name": "Microsoft Data School 1기 수료",
-      "period": ["2024. 00", "2024. 00"],
-      "description": "Azure 기반 데이터 엔지니어링 과정 수료\nAzure SQL, Data Factory, Databricks, Fabric 등을 활용한 데이터 파이프라인 및 분석 환경 구축 실습"
+      "name": "전남고등학교 졸업",
+      "period": ["2014. 03", "2017. 02"]
     },
     {
       "id": 1,
       "name": "숭실대학교 산업정보시스템공학과 졸업",
-      "period": ["2019. 03", "2025. 02"],
-      "description": "데이터 분석, 데이터베이스, 정보시스템 및 비즈니스 프로세스 전반을 학습하며 데이터 기반 문제 해결 역량을 강화"
+      "period": ["2019. 03", "2025. 02"]
+    },
+    {
+      "id": 2,
+      "name": "Microsoft Data School 1기 수료",
+      "period": ["2024. 01", "2024. 06"]
     }
-
   ],
-
-  "certificate": [
-
-  ],
-
-  "award": [
-
-  ]
+  "certificate": [],
+  "award": []
 }
