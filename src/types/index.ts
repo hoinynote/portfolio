@@ -15,13 +15,14 @@ export interface WorkExperienceProps {
   imgSrc?: string;
 }
 
+// [중요] ProjectProps는 여기서 딱 한 번만 정의합니다.
 export interface ProjectProps {
   id: number;
   name: string;
   description: string; // 회색 박스 요약
   body?: string;       // 상세 내용 (마크다운)
   repoUrl: string;
-  webUrl?: string;     // 선택 사항 (?)
+  webUrl?: string;     // 물음표(?)가 있어야 합니다
   isTeam?: boolean;
   period: string[];
   stack: string[];
