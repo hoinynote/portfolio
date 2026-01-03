@@ -11,7 +11,7 @@ const ProjectItem = ({
   id,
   name,
   description,
-  repoUrl,
+  // repoUrl,  <-- 제거함 (경고 해결)
   webUrl,
   period,
   stack,
@@ -20,7 +20,7 @@ const ProjectItem = ({
 }: ExtendedProjectProps) => {
 
   const CardContent = (
-    <div className={`flex flex-col md:flex-row w-full bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-xl overflow-hidden transition-all duration-300 ${isLink ? 'hover:shadow-lg hover:border-blue-500/30 cursor-pointer' : ''}`}>
+    <div className={`flex flex-col md:flex-row w-full bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-xl overflow-hidden transition-all duration-300 ${isLink ? 'hover:shadow-lg hover:border-black/20 dark:hover:border-white/20 cursor-pointer' : ''}`}>
       
       {/* 1. 이미지 영역 */}
       {imgSrc ? (
@@ -42,15 +42,15 @@ const ProjectItem = ({
       <div className="flex flex-col flex-grow p-6 justify-between">
         <div>
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3">
-            <h3 className={`text-xl font-bold text-gray-900 dark:text-gray-100 ${isLink ? 'group-hover:text-blue-600' : ''} transition-colors`}>
+            <h3 className={`text-xl font-bold text-black dark:text-white ${isLink ? 'group-hover:underline underline-offset-4' : ''} transition-all`}>
               {name}
             </h3>
-            <span className="text-xs font-semibold text-gray-500 bg-gray-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md w-fit whitespace-nowrap">
+            <span className="text-xs font-semibold text-zinc-500 bg-zinc-100 dark:bg-zinc-800 px-2.5 py-1 rounded-md w-fit whitespace-nowrap">
               {period[0]} - {period[1]}
             </span>
           </div>
 
-          <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-5 line-clamp-3 md:line-clamp-4">
+          <p className="text-zinc-700 dark:text-zinc-300 text-sm leading-relaxed mb-5 line-clamp-3 md:line-clamp-4 font-medium">
             {description}
           </p>
         </div>
@@ -59,19 +59,18 @@ const ProjectItem = ({
           {/* 스택 태그 */}
           <div className="flex flex-wrap gap-1.5">
             {stack.map((tech) => (
-              <span key={tech} className="px-2 py-1 text-[11px] font-medium text-blue-600 bg-blue-50 dark:text-blue-300 dark:bg-blue-900/20 rounded border border-blue-100 dark:border-blue-900/30">
+              <span key={tech} className="px-2 py-1 text-[11px] font-bold text-zinc-700 bg-zinc-100 dark:text-zinc-300 dark:bg-zinc-800 rounded">
                 {tech}
               </span>
             ))}
           </div>
 
-          {/* [추가된 부분] 클릭 가능한 프로젝트일 경우 안내 문구 표시 */}
+          {/* 클릭 유도 또는 링크 */}
           {isLink ? (
-            <div className="flex items-center gap-1 text-sm font-bold text-blue-600 dark:text-blue-400 group-hover:underline decoration-2 underline-offset-4">
+            <div className="flex items-center gap-1 text-sm font-bold text-black dark:text-white group-hover:underline decoration-2 underline-offset-4">
               View Detail <span className="text-lg leading-none">→</span>
             </div>
           ) : (
-            // 링크가 아닐 때 webUrl(배포 사이트)이 있다면 표시
             webUrl && (
               <div onClick={(e) => e.preventDefault()}> 
                 <Links repoUrl="" webUrl={webUrl} /> 

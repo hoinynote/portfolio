@@ -8,17 +8,17 @@ import Footer from "@/components/Footer";
 import Layout from "@/components/Layout";
 import ResumeTitle from "@/components/ResumeTitle";
 import ProjectItem from "@/components/Project/ProjectItem";
-import { DataProps, ProjectProps } from "@/types"; // WorkExperienceProps 제거
+import { DataProps, ProjectProps } from "@/types"; // WorkExperienceProps 제거됨
 
 const Home: NextPage<DataProps> = ({
   resumeTitle,
   information,
-  // workExperience, // 사용하지 않으므로 제거 (Lint 에러 방지)
+  // workExperience, // 제거됨
   project,
-  // activity, // 사용하지 않으므로 제거
+  // activity, // 제거됨
   education,
-  // certificate, // 사용하지 않으므로 제거
-  // award, // 사용하지 않으므로 제거
+  // certificate, // 제거됨
+  // award, // 제거됨
 }) => {
   const featuredProjects = project.slice(0, 3);
   const otherProjects = project.slice(3);
@@ -113,7 +113,8 @@ const Home: NextPage<DataProps> = ({
               About Me
             </h3>
             <div className="prose prose-lg dark:prose-invert max-w-none text-black dark:text-zinc-100 leading-relaxed font-medium">
-              <ReactMarkdown>{information.markdown}</ReactMarkdown>
+              {/* [중요 수정] || "" 를 추가하여 undefined 에러 방지 */}
+              <ReactMarkdown>{information.markdown || ""}</ReactMarkdown>
             </div>
           </div>
 
@@ -167,15 +168,15 @@ export const getStaticProps = async () => {
   const filePath = path.join(process.cwd(), "data.json");
   const jsonData = await fsPromises.readFile(filePath, "utf8");
   const objectData = JSON.parse(jsonData);
-  
-  // 데이터 가공 부분 (교육 설명 제거 로직 등은 불필요하므로 기본 구조 유지)
+  const informationWithData = { ...objectData.information };
   const projectWithData = objectData.project.map(async (item: ProjectProps) => {
     return getImgSrc({ section: "project", item: await getMd({ section: "project", item }) });
   });
 
   return {
     props: {
-      ...objectData, // 모든 데이터를 넘기지만, 컴포넌트에서 필요한 것만 사용
+      ...objectData,
+      information: informationWithData,
       workExperience: [],
       project: await Promise.all(projectWithData),
     },
