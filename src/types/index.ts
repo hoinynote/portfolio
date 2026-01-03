@@ -15,17 +15,18 @@ export interface WorkExperienceProps {
   imgSrc?: string;
 }
 
+// [중요] ProjectProps는 여기서 딱 한 번만 정의되어야 합니다.
 export interface ProjectProps {
   id: number;
   name: string;
-  description: string;
+  description: string; // 회색 박스 요약
+  body?: string;       // 상세 내용 (마크다운)
   repoUrl: string;
-  webUrl?: string;
+  webUrl?: string;     // ?가 붙어있어야 함 (선택 사항)
   isTeam?: boolean;
   period: string[];
   stack: string[];
-  markdown?: string;
-  imgSrc?: string;
+  imgSrc: string;
 }
 
 export interface AwardProps {
@@ -52,7 +53,7 @@ export interface DataProps {
   education: {
     id: number;
     name: string;
-    description: string;
+    description?: string;
     period: string[];
   }[];
   certificate: {
@@ -63,18 +64,3 @@ export interface DataProps {
   }[];
   award: AwardProps[];
 }
-
-export interface ProjectProps {
-  id: number;
-  name: string;
-  description: string; // 회색 박스에 들어갈 요약글
-  body?: string;       // 아래쪽에 나올 상세 설명 (불렛 포인트 등)
-  webUrl: string;
-  repoUrl: string;
-  isTeam: boolean;
-  period: string[];
-  stack: string[];
-  imgSrc: string;
-}
-
-// ... 나머지 코드는 그대로 유지
