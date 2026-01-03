@@ -21,8 +21,8 @@ export interface ProjectProps {
   description: string;
   body?: string;
   repoUrl: string;
-  webUrl: string;      // [수정] ? 제거 (충돌 해결)
-  isTeam: boolean;     // [수정] ? 제거 (충돌 해결)
+  webUrl: string;      // [수정됨] ?가 없어야 합니다!
+  isTeam: boolean;     // [수정됨] ?가 없어야 합니다!
   period: string[];
   stack: string[];
   imgSrc: string;
