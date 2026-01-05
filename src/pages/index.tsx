@@ -45,7 +45,7 @@ const Home: NextPage<DataProps> = ({
           </div>
 
           {/* 프로필 사진 & 기본 정보 & 학력 */}
-          <div className="flex flex-col md:flex-row gap-12 md:gap-20 items-start mb-16">
+          <div className="flex flex-col md:flex-row gap-12 md:gap-20 items-start mb-8">
             
             {/* [왼쪽] 사진 */}
             <div className="flex-shrink-0 mx-auto md:mx-0">
@@ -98,17 +98,25 @@ const Home: NextPage<DataProps> = ({
             </div>
           </div>
 
-          {/* [수정] 소개 섹션: 위로 올리고, 왼쪽 정렬, 담백한 제목(소개) */}
+          {/* [수정] 소개 섹션: 구조화된 데이터(intro) 렌더링 */}
           <div className="flex flex-col items-start justify-start text-left mb-24 w-full">
-            <h3 className="font-black text-black dark:text-white text-2xl uppercase tracking-widest mb-8 border-b-2 border-zinc-800 dark:border-zinc-200 pb-2">
+            <h3 className="font-black text-black dark:text-white text-2xl uppercase tracking-widest mb-10 border-b-2 border-zinc-800 dark:border-zinc-200 pb-2">
               소개
             </h3>
             
-            {/* prose-xl 적용: 글씨 크기 키움 */}
-            {/* max-w-none: 왼쪽 정렬이므로 너비 제한을 풀어 시원하게 */}
-            <div className="prose prose-lg md:prose-xl dark:prose-invert max-w-none text-zinc-800 dark:text-zinc-300 leading-loose font-medium
-              prose-p:mb-8">
-              <ReactMarkdown>{information.markdown || ""}</ReactMarkdown>
+            <div className="flex flex-col gap-0 max-w-4xl">
+              {information.intro && information.intro.map((item) => (
+                <div key={item.id} className="flex flex-col gap-3 mb-12 last:mb-0">
+                  {/* 소제목: 크기 줄임(text-xl), 파란색 강조 */}
+                  <h4 className="text-xl font-bold text-blue-600 dark:text-blue-400">
+                    {item.title}
+                  </h4>
+                  {/* 본문: 줄 간격 넓힘(leading-loose), 색상(zinc-400) */}
+                  <p className="text-base md:text-lg text-zinc-600 dark:text-zinc-300 leading-loose font-medium">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -159,7 +167,9 @@ export const getStaticProps = async () => {
   const filePath = path.join(process.cwd(), "data.json");
   const jsonData = await fsPromises.readFile(filePath, "utf8");
   const objectData = JSON.parse(jsonData);
+  
   const informationWithData = { ...objectData.information };
+  
   const projectWithData = objectData.project.map(async (item: ProjectProps) => {
     return getImgSrc({ section: "project", item: await getMd({ section: "project", item }) });
   });

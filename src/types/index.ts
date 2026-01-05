@@ -1,7 +1,7 @@
 export interface InformationProps {
   name: string;
   contact: { id: number; name: string; href: string; isEmail?: boolean }[];
-  markdown?: string;
+  intro: { id: number; title: string; description: string }[];
   imgSrc?: string;
 }
 
@@ -21,11 +21,13 @@ export interface ProjectProps {
   description: string;
   body?: string;
   repoUrl: string;
-  webUrl: string;      // [수정됨] ?가 없어야 합니다!
-  isTeam: boolean;     // [수정됨] ?가 없어야 합니다!
+  webUrl: string;
+  isTeam: boolean;
   period: string[];
   stack: string[];
   imgSrc: string;
+  member?: string; // [추가] 인원 정보 (예: "3인 팀 프로젝트")
+  role?: string;   // [추가] 역할 정보
 }
 
 export interface AwardProps {

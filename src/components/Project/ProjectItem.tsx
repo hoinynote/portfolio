@@ -11,12 +11,14 @@ interface ExtendedProjectProps extends ProjectProps {
 const ProjectItem = ({
   id,
   name,
-  description, // 회색 박스 요약글
-  body,        // 상세 본문 (Markdown)
+  description,
+  body,
   webUrl,
   period,
   stack,
   imgSrc,
+  member,
+  role,
   isLink = true,
 }: ExtendedProjectProps) => {
 
@@ -34,17 +36,31 @@ const ProjectItem = ({
           )}
         </div>
 
-        {/* 정보 */}
+        {/* 정보 영역 */}
         <div className="flex flex-col gap-2">
+          {/* 제목 */}
           <h3 className="text-2xl font-black text-zinc-900 dark:text-white leading-tight break-keep">
             {name}
           </h3>
-          <span className="text-lg font-bold text-zinc-700 dark:text-zinc-300">
-            Data Engineer
-          </span>
-          <span className="font-mono text-sm font-medium text-zinc-500 dark:text-zinc-500">
-            {period[0]} - {period[1]}
-          </span>
+          
+          <div className="flex flex-col gap-1">
+            {/* [수정] 인원 정보 (한글) */}
+            {member && (
+              <span className="text-sm font-medium text-zinc-500 dark:text-zinc-400">
+                {member}
+              </span>
+            )}
+
+            {/* [수정] 역할 (Role) */}
+            <span className="text-lg font-bold text-blue-600 dark:text-blue-400">
+              {role || "Data Engineer"}
+            </span>
+
+            {/* 기간 */}
+            <span className="font-mono text-sm font-medium text-zinc-400 dark:text-zinc-500 mt-1">
+              {period[0]} - {period[1]}
+            </span>
+          </div>
         </div>
       </div>
 
@@ -67,17 +83,18 @@ const ProjectItem = ({
           ))}
         </div>
 
-        {/* 상세 본문 */}
+        {/* 상세 본문 (메인 페이지용 짧은 버전 렌더링) */}
         <div className="prose prose-base dark:prose-invert max-w-none 
           text-zinc-700 dark:text-zinc-300 
           prose-headings:font-black prose-headings:text-zinc-900 dark:prose-headings:text-white prose-headings:text-xl prose-headings:mb-4 prose-headings:mt-12 first:prose-headings:mt-0
           prose-p:leading-relaxed prose-p:my-4
           prose-li:my-2 prose-ul:my-4 prose-ul:list-disc prose-ul:pl-5
-          prose-strong:text-zinc-900 dark:prose-strong:text-white prose-strong:font-extrabold">
+          prose-strong:text-zinc-900 dark:prose-strong:text-white prose-strong:font-extrabold
+          prose-img:rounded-xl prose-img:shadow-lg prose-img:border prose-img:border-zinc-200 dark:prose-img:border-zinc-700">
           <ReactMarkdown>{body || ""}</ReactMarkdown>
         </div>
 
-        {/* [버튼] 확실한 CTA(Call To Action) 스타일로 변경 */}
+        {/* 버튼 */}
         <div className="flex items-center gap-4 mt-16 pt-8 border-t border-zinc-200 dark:border-zinc-700">
           {isLink && (
             <Link 
@@ -85,7 +102,6 @@ const ProjectItem = ({
               className="group relative inline-flex items-center gap-2 px-8 py-3.5 text-base font-bold text-white bg-zinc-900 dark:bg-zinc-100 dark:text-zinc-900 rounded-xl hover:bg-zinc-800 dark:hover:bg-white transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5"
             >
               <span>자세히 보기</span>
-              {/* 화살표 아이콘 (Hover시 이동) */}
               <svg 
                 className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" 
                 fill="none" 
