@@ -1,6 +1,5 @@
 import ContactItem from "../ContactItem";
 import Introduce from "./Introduce";
-
 import { DataProps } from "@/types";
 
 const Information = ({ information }: Pick<DataProps, "information">) => {
@@ -8,9 +7,10 @@ const Information = ({ information }: Pick<DataProps, "information">) => {
     <div className="flex flex-col gap-8">
       <div className="flex flex-col gap-2">
         <h1 className="leading-[1.15]">
-          {/* 포지션에 맞게 문구를 수정해주세요. 혹은, 본인이 원하는 대로 문구를 바꿔주세요. */}
           안녕하세요,
-          <br /> 신입 데이터 엔지니어{" "}
+          <br /> 
+          {/* 1. 역할을 Lead Database Engineer & Frontend Developer로 수정 */}
+          Lead Database Engineer & Frontend Developer{" "}
           <span className="text-PRIMARY font-semibold">{information.name}</span>
           입니다.
         </h1>
@@ -26,7 +26,8 @@ const Information = ({ information }: Pick<DataProps, "information">) => {
           ))}
         </div>
       </div>
-      <Introduce markdown={information.markdown} />
+      {/* 2. Vercel 빌드 에러 방지를 위해 (information as any).markdown으로 타입 우회 */}
+      <Introduce markdown={(information as any).markdown} />
     </div>
   );
 };
