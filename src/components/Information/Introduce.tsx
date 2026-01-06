@@ -1,16 +1,15 @@
 import React from 'react';
-import Introduce from './Introduce';
-import { information } from '@/data/content'; // 데이터 경로가 다를 경우 본인의 경로 유지
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
-const Information = () => {
+// 에러 원인이었던 import { information } ... 라인을 삭제했습니다.
+
+const Introduce = ({ markdown }: any) => {
   return (
-    <section>
-      {/* 기존: <Introduce markdown={information.markdown} /> 
-          수정: information을 any로 캐스팅하여 'markdown' 속성 접근 허용
-      */}
-      <Introduce markdown={(information as any).markdown} />
-    </section>
+    <ReactMarkdown remarkPlugins={[remarkGfm]}>
+      {markdown ?? ""}
+    </ReactMarkdown>
   );
 };
 
-export default Information;
+export default Introduce;
