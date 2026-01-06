@@ -10,7 +10,7 @@ const Information = ({ information }: Pick<DataProps, "information">) => {
         <h1 className="leading-[1.15]">
           안녕하세요,
           <br /> 
-          {/* 1. 역할을 Lead Database Engineer & Frontend Developer로 수정 */}
+          {/* 직무명을 Lead Database Engineer & Frontend Developer로 명시 */}
           Lead Database Engineer & Frontend Developer{" "}
           <span className="text-PRIMARY font-semibold">{information.name}</span>
           입니다.
@@ -27,8 +27,10 @@ const Information = ({ information }: Pick<DataProps, "information">) => {
           ))}
         </div>
       </div>
-      {/* 2. 빌드 에러 방지를 위해 (information as any).markdown으로 타입 우회 */}
-      <Introduce markdown={(information as any).markdown} />
+      
+      {/* 👇 여기가 핵심입니다! */}
+      {/* information 타입 안에 markdown이 정의되어 있지 않아도, 강제로 읽어오도록 (as any)를 추가했습니다. */}
+      <Introduce markdown={(information as any).markdown || ""} />
     </div>
   );
 };
