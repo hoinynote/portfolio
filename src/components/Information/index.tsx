@@ -1,5 +1,6 @@
 import ContactItem from "../ContactItem";
 import Introduce from "./Introduce";
+
 import { DataProps } from "@/types";
 
 const Information = ({ information }: Pick<DataProps, "information">) => {
@@ -26,7 +27,7 @@ const Information = ({ information }: Pick<DataProps, "information">) => {
           ))}
         </div>
       </div>
-      {/* 2. Vercel 빌드 에러 방지를 위해 (information as any).markdown으로 타입 우회 */}
+      {/* 2. 빌드 에러 방지를 위해 (information as any).markdown으로 타입 우회 */}
       <Introduce markdown={(information as any).markdown} />
     </div>
   );
