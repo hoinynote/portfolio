@@ -12,7 +12,7 @@ const ProjectItem = ({
   id,
   name,
   description,
-  body,
+  body, // 본문 내용 (다시 복구됨)
   webUrl,
   period,
   stack,
@@ -25,7 +25,7 @@ const ProjectItem = ({
   return (
     <article className="grid grid-cols-1 md:grid-cols-[280px_1fr] items-start mb-24 md:mb-32 border-t border-zinc-200 dark:border-zinc-800 pt-12 first:border-0 first:pt-0">
       
-      {/* [왼쪽] Sticky 영역 */}
+      {/* [왼쪽] Sticky 영역: 썸네일 및 메타 정보 */}
       <div className="flex flex-col gap-6 md:sticky md:top-24 h-fit pr-6 mb-8 md:mb-0 text-left">
         {/* 썸네일 */}
         <div className="relative w-36 h-36 bg-white dark:bg-zinc-800 rounded-2xl overflow-hidden shadow-sm border border-zinc-200 dark:border-zinc-700">
@@ -38,20 +38,19 @@ const ProjectItem = ({
 
         {/* 정보 영역 */}
         <div className="flex flex-col gap-2">
-          {/* 제목 */}
           <h3 className="text-2xl font-black text-zinc-900 dark:text-white leading-tight break-keep">
             {name}
           </h3>
           
           <div className="flex flex-col gap-1">
-            {/* [수정] 인원 정보 (한글) */}
+            {/* 인원 정보 */}
             {member && (
               <span className="text-sm font-medium text-zinc-500 dark:text-zinc-400">
                 {member}
               </span>
             )}
 
-            {/* [수정] 역할 (Role) */}
+            {/* 역할 (Role) */}
             <span className="text-lg font-bold text-blue-600 dark:text-blue-400">
               {role || "Data Engineer"}
             </span>
@@ -75,7 +74,7 @@ const ProjectItem = ({
         </div>
 
         {/* 기술 스택 */}
-        <div className="flex flex-wrap gap-2.5 mb-10">
+        <div className="flex flex-wrap gap-2.5 mb-8">
           {stack.map((tech) => (
             <span key={tech} className="px-3 py-1.5 text-xs font-bold text-teal-800 bg-teal-50 dark:text-teal-200 dark:bg-teal-900/30 rounded border border-teal-100 dark:border-teal-900/50">
               {tech}
@@ -83,10 +82,10 @@ const ProjectItem = ({
           ))}
         </div>
 
-        {/* 상세 본문 (메인 페이지용 짧은 버전 렌더링) */}
+        {/* [복구됨] 본문 텍스트 렌더링 영역 */}
         <div className="prose prose-base dark:prose-invert max-w-none 
           text-zinc-700 dark:text-zinc-300 
-          prose-headings:font-black prose-headings:text-zinc-900 dark:prose-headings:text-white prose-headings:text-xl prose-headings:mb-4 prose-headings:mt-12 first:prose-headings:mt-0
+          prose-headings:font-black prose-headings:text-zinc-900 dark:prose-headings:text-white prose-headings:text-xl prose-headings:mb-4 prose-headings:mt-8 first:prose-headings:mt-0
           prose-p:leading-relaxed prose-p:my-4
           prose-li:my-2 prose-ul:my-4 prose-ul:list-disc prose-ul:pl-5
           prose-strong:text-zinc-900 dark:prose-strong:text-white prose-strong:font-extrabold
@@ -94,23 +93,30 @@ const ProjectItem = ({
           <ReactMarkdown>{body || ""}</ReactMarkdown>
         </div>
 
-        {/* 버튼 */}
-        <div className="flex items-center gap-4 mt-16 pt-8 border-t border-zinc-200 dark:border-zinc-700">
+        {/* 버튼 영역 (업그레이드된 디자인 유지) */}
+        <div className="flex items-center gap-6 mt-12 pt-0">
           {isLink && (
             <Link 
               href={`/project/${id}`}
-              className="group relative inline-flex items-center gap-2 px-8 py-3.5 text-base font-bold text-white bg-zinc-900 dark:bg-zinc-100 dark:text-zinc-900 rounded-xl hover:bg-zinc-800 dark:hover:bg-white transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5"
+              className="group relative inline-flex items-center justify-between gap-6 px-8 py-4 overflow-hidden rounded-2xl bg-white/60 dark:bg-zinc-900/60 backdrop-blur-md border-2 border-blue-500/30 hover:border-blue-600 transition-all duration-300 hover:shadow-[0_0_30px_rgba(37,99,235,0.25)] hover:-translate-y-1 w-full md:w-auto"
             >
-              <span>자세히 보기</span>
-              <svg 
-                className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor" 
-                strokeWidth={2.5}
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
+              {/* 텍스트: 굵고 크게 */}
+              <span className="text-lg font-black text-zinc-800 dark:text-zinc-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors tracking-tight">
+                프로젝트 자세히 보기
+              </span>
+              
+              {/* 아이콘 원형 배경: 진한 파란색 포인트 */}
+              <span className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 text-white shadow-lg group-hover:scale-110 group-hover:bg-blue-500 transition-all duration-300">
+                <svg 
+                  className="w-5 h-5 -rotate-45 group-hover:rotate-0 transition-transform duration-300" 
+                  fill="none" 
+                  viewBox="0 0 24 24" 
+                  stroke="currentColor" 
+                  strokeWidth={3}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </span>
             </Link>
           )}
           

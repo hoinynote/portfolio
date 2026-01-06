@@ -7,39 +7,23 @@
     "contact": [
       { "id": 0, "name": "Email", "href": "mailto:ghdls3070@naver.com", "isEmail": true }
     ],
-    "intro": [
-      {
-        "id": 1,
-        "title": "데이터의 흐름을 설계하는 엔지니어",
-        "description": "산업정보시스템공학을 전공하며 전체 공정의 효율을 높이는 최적화 사고를 훈련했습니다. 데이터 파이프라인 역시 하나의 유기적인 생산 시스템이라 생각합니다. 데이터가 생성되어 분석가에게 도달하기까지의 병목을 제거하고, 물 흐르듯 막힘없는 데이터 환경을 만드는 데 집중합니다."
-      },
-      {
-        "id": 2,
-        "title": "직접 부딪히며 배운 디테일의 차이",
-        "description": "Microsoft Data School에서 Azure 기반의 End-to-End 파이프라인을 구축하며 이론과 실무의 간극을 메웠습니다. 대용량 데이터를 처리할 때 사소한 스키마 설정이나 파티셔닝 전략이 전체 성능에 얼마나 큰 영향을 미치는지 경험했습니다. 이를 통해 '돌아가는 코드'를 넘어 '견고한 아키텍처'를 고민하게 되었습니다."
-      },
-      {
-        "id": 3,
-        "title": "동료의 시간을 아껴주는 협업",
-        "description": "엔지니어링의 최종 목표는 비즈니스 가치 창출과 동료의 생산성 향상이라고 믿습니다. 복잡한 로직일수록 더 쉬운 언어로 문서화하고, 누가 봐도 이해하기 쉬운 코드를 작성하려 노력합니다. 나의 작업물이 팀 전체의 자산이 되도록, 배려가 담긴 엔지니어링을 지향합니다."
-      }
-    ]
+    "markdown": "### **데이터의 흐름을 설계하는 엔지니어**\n산업정보시스템공학을 전공하며 시스템의 비효율을 개선하는 최적화 사고를 길렀습니다. 복잡한 공정 데이터를 다루며 데이터의 정합성이 의사결정에 미치는 치명적인 영향을 체감했고, 이를 계기로 신뢰할 수 있는 데이터 파이프라인을 구축하는 데이터 엔지니어링에 매료되었습니다.\n\n### **실무 중심의 문제 해결 경험**\nMicrosoft Data School 1기를 수료하며 Azure 클라우드 환경에서 End-to-End 데이터 파이프라인을 구축했습니다. 정형/비정형 데이터 수집부터 Data Lake 적재, 그리고 분석을 위한 Mart 구성까지의 전 과정을 직접 수행하며 기술적 단단함을 쌓았습니다. 특히 대용량 데이터 처리 과정에서 발생하는 지연 문제를 파티셔닝과 인덱싱 전략으로 해결하며 성능 최적화의 중요성을 배웠습니다.\n\n### **함께 성장하는 협업의 가치**\n엔지니어링은 혼자 하는 것이 아니라 동료와 함께 시스템을 만들어가는 과정이라 생각합니다. 복잡한 로직일수록 명료한 문서화를 통해 팀원들과 지식을 공유하려 노력합니다. '내 코드가 동료의 시간을 아껴줄 수 있는가?'를 항상 고민하며, 유지보수가 쉬운 간결한 코드를 작성하는 것을 목표로 합니다."
   },
   "workExperience": [],
   "project": [
     {
       "id": 6,
-      "name": "메기스터디 데이터 분석 및 서비스 개선",
+      "name": "AI 수능 영어 학습 플랫폼 '메기스터디'",
       "description": "교육 플랫폼의 파편화된 데이터를 통합하여 데이터 사일로 문제를 해결하고, 이탈 위험군을 조기에 감지할 수 있는 분석 환경을 구축한 프로젝트입니다.",
       "body": "### **학습 데이터 통합으로 이탈률 감소에 기여했습니다.**\n\n- **Azure Data Factory 기반의 통합 파이프라인 구축**\n  - 학습 로그(DB), 결제 정보(API), 상담 내역(CSV) 등 다양한 소스의 데이터를 Azure Data Lake Storage Gen2로 통합\n  - 매일 발생하는 수 GB의 데이터를 처리하기 위해 **파티셔닝(Partitioning)** 전략을 적용하여 쿼리 성능 최적화\n\n- **이탈 위험군 탐지 모델 구현**\n  - Spark(Databricks)를 활용해 '최근 접속일', '진도율', '테스트 점수' 등의 피처를 추출하고 이탈 위험 점수 산출\n  - Power BI와 연동하여 마케팅 팀이 즉각적으로 활용 가능한 **시각화 대시보드** 배포\n\n### **성과**\n- 데이터 분석 준비 시간 **40% 단축** (기존 수동 취합 대비)\n- 이탈 위험군 타겟 프로모션을 위한 데이터 근거 마련",
       "webUrl": "",
       "repoUrl": "",
       "isTeam": true,
-      "period": ["2024. 05", "2024. 06"],
-      "stack": ["Azure Synapse", "Spark", "Power BI", "ADF"],
+      "period": ["2025. 08", "2025. 09"],
+      "stack": ["Azure OpenAI", "MS Fabric", "Azure SQL", "Next.js"],
       "imgSrc": "/images/project/6.png",
       "member": "4인 팀 프로젝트",
-      "role": "Data Engineer (ETL Pipeline)"
+      "role": "Lead Database Engineer & Frontend Developer"
     },
     {
       "id": 5,
@@ -49,7 +33,7 @@
       "webUrl": "",
       "repoUrl": "",
       "isTeam": true,
-      "period": ["2025. 06", "2025. 07"],
+      "period": ["2025. 07", "2025. 07"],
       "stack": ["Azure Stream Analytics", "Cosmos DB", "Azure Functions", "Azure OpenAI"],
       "imgSrc": "/images/project/5.png",
       "member": "3인 팀 프로젝트",
@@ -58,57 +42,57 @@
     {
       "id": 4,
       "name": "Databricks 기반 BERT 개인화 영화 추천 시스템",
-      "description": "Databricks와 MLflow를 활용하여 영화 추천 모델의 실험부터 배포까지의 MLOps 파이프라인을 구축하고, Flask와 연동하여 실시간 서비스를 구현했습니다.",
+      "description": "협업 필터링과 콘텐츠 기반 필터링을 결합한 하이브리드 추천 시스템으로, 신규 유저의 콜드 스타트 문제를 해결하고 개인화된 추천을 제공했습니다.",
       "body": "### **개인화 추천 시스템의 A to Z**\n\nDatabricks와 Spark를 활용하여 대규모 영화 데이터를 분석하고, 최신 딥러닝 모델(BERT)을 적용하여 개인화 추천 시스템을 구축한 프로젝트입니다.\n\n**[ 주요 역할: PM & MLOps Engineer ]**\n- **Project Management:** 프로젝트 방향성 수립 및 전체 일정 리딩\n- **Platform Engineering:** Azure Databricks 기반의 통합 분석 환경 구축 및 데이터 파이프라인 설계\n- **MLOps:** MLflow를 활용한 모델 실험 추적(Tracking), 버전 관리(Registry), 서빙(Serving) 파이프라인 전담\n\n**[ 핵심 성과 ]**\n- **정확도 확보:** BERT 모델 도입으로 Precision@10 **0.86** 달성\n- **운영 효율화:** MLflow를 통한 모델 버전 관리 및 배포 자동화 체계 구축",
       "webUrl": "",
       "repoUrl": "",
       "isTeam": true,
-      "period": ["2025. 05", "2025. 06"],
-      "stack": ["Databricks", "Pyspark", "MLflow", "Flask", "Azure"],
+      "period": ["2025. 05", "2025. 05"],
+      "stack": ["Databricks", "MLflow", "BERT", "Flask"],
       "imgSrc": "/images/project/4.png",
       "member": "6인 팀 프로젝트",
       "role": "PM & MLOps Engineer"
     },
     {
       "id": 3,
-      "name": "중증 외상 센터 입지 선정 분석",
+      "name": "중증 외상 센터 입지 선정 및 닥터헬기 필요성 분석",
       "description": "골든타임 확보가 시급한 중증 외상 환자를 위해 공간 데이터 분석(GIS)을 수행하고, P-Median 알고리즘으로 최적의 외상 센터 입지를 도출했습니다.",
       "body": "### **데이터 기반으로 생명을 살리는 최적의 입지를 제안했습니다.**\n\n- **공간 데이터(GIS) 분석 및 시각화**\n  - QGIS를 활용해 도로 네트워크, 인구 밀도, 기존 응급 의료 시설 위치 등 이종 데이터를 결합\n  - 응급 의료 취약 지역을 히트맵(Heatmap)으로 시각화하여 분석 대상 지역 선정\n\n- **입지 최적화 모델링**\n  - '모든 환자의 평균 이동 시간 최소화'를 목표 함수로 설정한 P-Median 모델 적용\n  - 최적화 솔버를 통해 기존 시설 대비 접근성이 획기적으로 개선되는 후보지 2곳 선정\n\n### **성과**\n- 기존 대비 평균 이송 시간 **15% 단축** 가능한 모델 제시\n- 공공 데이터 활용 경진대회 입상 (예시)",
       "webUrl": "",
       "repoUrl": "",
       "isTeam": true,
-      "period": ["2023. 09", "2023. 12"],
-      "stack": ["R", "QGIS", "Tableau", "Geospatial Analysis"],
+      "period": ["2023. 03", "2023. 06"],
+      "stack": ["R", "GIS", "Data Visualization"],
       "imgSrc": "/images/project/3.png",
       "member": "4인 팀 프로젝트",
       "role": "Data Analyst"
     },
     {
       "id": 2,
-      "name": "무인판매점 도난방지 프로세스 개선",
+      "name": "무인판매점 도난방지 프로세스 개선 모델링",
       "description": "무인 매장의 도난 대응 프로세스를 분석하고, IoT 센서와 자동 알림 시스템을 도입하여 도난 대응 시간을 단축하는 TO-BE 프로세스를 설계했습니다.",
       "body": "### **프로세스 마이닝으로 운영 리스크를 줄였습니다.**\n\n- **AS-IS 프로세스 병목 분석**\n  - Bizagi를 활용해 기존의 수동적인 CCTV 모니터링 및 신고 절차를 모델링\n  - 도난 발생부터 신고까지 평균 3시간이 소요되는 문제점과 병목 구간 식별\n\n- **IoT 기반 자동화 프로세스(TO-BE) 설계**\n  - 매장 내 센서가 이상 행동 감지 시 경고 방송 송출 및 관리자 앱 알림 자동화\n  - 경찰 신고 연동 프로세스를 BPMN 표준으로 설계\n\n### **성과**\n- 도난 대응 예상 소요 시간 **70% 단축** 모델 제시\n- 24시간 모니터링 인력 비용 절감 효과 분석",
       "webUrl": "",
       "repoUrl": "",
       "isTeam": true,
-      "period": ["2023. 03", "2023. 06"],
+      "period": ["2022. 10", "2022. 11"],
       "stack": ["Bizagi", "Process Mining", "BPMN"],
       "imgSrc": "/images/project/2.png",
-      "member": "5인 팀 프로젝트",
+      "member": "4인 팀 프로젝트",
       "role": "Process Consultant"
     },
     {
       "id": 1,
-      "name": "당뇨병 예측 머신러닝 모델",
+      "name": "설문조사 기반 당뇨병 예측 ML 모델 구축",
       "description": "건강 검진 데이터를 활용하여 당뇨병 발병 위험을 예측하는 분류 모델입니다. SMOTE로 데이터 불균형을 해결하고 앙상블 기법으로 예측 성능을 높였습니다.",
       "body": "### **불균형 데이터를 극복하고 예측 성능을 높였습니다.**\n\n- **데이터 불균형 해결 (SMOTE)**\n  - 당뇨병 환자(Positive) 데이터가 적은 문제를 해결하기 위해 SMOTE 기법으로 소수 클래스 오버샘플링\n  - 모델이 다수 클래스(정상)에 편향되지 않도록 학습 데이터 균형 확보\n\n- **앙상블 모델링 및 튜닝**\n  - XGBoost와 Random Forest를 결합한 앙상블 모델 구축\n  - Grid Search로 최적의 하이퍼파라미터를 탐색하여 F1-Score 최적화\n\n### **성과**\n- 최종 모델 정확도 **92%** 달성\n- 주요 발병 요인(Feature Importance) 도출로 예방 가이드라인 제시",
       "webUrl": "",
       "repoUrl": "",
       "isTeam": true,
-      "period": ["2023. 03", "2023. 06"],
-      "stack": ["Python", "XGBoost", "Pandas", "Scikit-learn"],
+      "period": ["2022. 10", "2022. 11"],
+      "stack": ["Python", "Machine Learning", "Pandas"],
       "imgSrc": "/images/project/1.png",
-      "member": "개인 프로젝트",
+      "member": "2인 팀 프로젝트",
       "role": "ML Engineer"
     },
     {
@@ -119,8 +103,8 @@
       "webUrl": "",
       "repoUrl": "",
       "isTeam": true,
-      "period": ["2022. 11", "2022. 11"],
-      "stack": ["MS SQL Server", "ERD Cloud", "Database Modeling"],
+      "period": ["2021. 10", "2021. 11"],
+      "stack": ["SQL Server", "ERD", "Database Design"],
       "imgSrc": "/images/project/0.png",
       "member": "4인 팀 프로젝트",
       "role": "Database Architect"
