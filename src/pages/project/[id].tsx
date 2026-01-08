@@ -5,11 +5,11 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw'; // [추가] HTML 해석 플러그인
 
 import Layout from '../../components/Layout';
 import Data from '../../../data.json';
 
-// [수정 1] 데이터 타입 정의 (에러 해결 핵심)
 interface ProjectData {
   id: number;
   name: string;
@@ -43,7 +43,6 @@ const MarkdownStyles = {
   td: 'border border-gray-300 px-4 py-3',
 };
 
-// [수정 2] Props에 타입 적용 ({ project, content }: ProjectDetailProps)
 const ProjectDetail = ({ project, content }: ProjectDetailProps) => {
   const [mounted, setMounted] = useState(false);
 
@@ -101,8 +100,8 @@ const ProjectDetail = ({ project, content }: ProjectDetailProps) => {
           {mounted && (
             <ReactMarkdown 
               remarkPlugins={[remarkGfm]}
+              rehypePlugins={[rehypeRaw]} // [수정] HTML 태그 허용 설정 추가
               components={{
-                // [수정 3] 불필요한 'node' 파라미터 제거 (ESLint 경고 해결)
                 h1: (props) => <h1 className={MarkdownStyles.h1} {...props} />,
                 h2: (props) => <h2 className={MarkdownStyles.h2} {...props} />,
                 h3: (props) => <h3 className={MarkdownStyles.h3} {...props} />,
@@ -111,9 +110,14 @@ const ProjectDetail = ({ project, content }: ProjectDetailProps) => {
                 ol: (props) => <ol className={MarkdownStyles.ol} {...props} />,
                 li: (props) => <li className="pl-2" {...props} />,
                 blockquote: (props) => <blockquote className={MarkdownStyles.blockquote} {...props} />,
-                img: (props) => (
+                img: ({ node, ...props }) => (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img className={MarkdownStyles.img} {...props} alt={props.alt || "Project Image"} />
+                    <img 
+                      className={MarkdownStyles.img} 
+                      {...props} 
+                      alt={props.alt || "Project Image"} 
+                      style={{ maxWidth: props.width || '100%' }} // HTML의 width 속성 대응
+                    />
                 ),
                 a: (props) => <a className={MarkdownStyles.a} {...props} />,
                 table: (props) => <table className={MarkdownStyles.table} {...props} />,
