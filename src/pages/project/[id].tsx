@@ -5,7 +5,8 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import rehypeRaw from 'rehype-raw'; // [추가] HTML 해석 플러그인
+import rehypeRaw from 'rehype-raw';   // HTML 태그(<strong>, <div> 등) 인식을 위해 필요
+import rehypeSlug from 'rehype-slug'; // 목차 클릭 시 이동(id 자동 생성)을 위해 필요
 
 import Layout from '../../components/Layout';
 import Data from '../../../data.json';
@@ -27,9 +28,9 @@ interface ProjectDetailProps {
 }
 
 const MarkdownStyles = {
-  h1: 'text-3xl md:text-4xl font-extrabold mt-20 mb-8 border-b border-gray-200 dark:border-gray-700 pb-4 text-gray-900 dark:text-gray-50',
-  h2: 'text-2xl md:text-3xl font-bold mt-16 mb-6 text-gray-800 dark:text-gray-200',
-  h3: 'text-xl font-bold mt-10 mb-4 text-gray-800 dark:text-gray-200',
+  h1: 'text-3xl md:text-4xl font-extrabold mt-20 mb-8 border-b border-gray-200 dark:border-gray-700 pb-4 text-gray-900 dark:text-gray-50 scroll-mt-24', // scroll-mt-24: 스크롤 이동 시 헤더에 가려지지 않게 여백 줌
+  h2: 'text-2xl md:text-3xl font-bold mt-16 mb-6 text-gray-800 dark:text-gray-200 scroll-mt-24',
+  h3: 'text-xl font-bold mt-10 mb-4 text-gray-800 dark:text-gray-200 scroll-mt-24',
   p: 'mb-8 leading-relaxed text-lg text-gray-700 dark:text-gray-300 break-keep',
   ul: 'list-disc list-outside mb-8 ml-6 space-y-3 text-gray-700 dark:text-gray-300 text-lg leading-relaxed',
   ol: 'list-decimal list-outside mb-8 ml-6 space-y-3 text-gray-700 dark:text-gray-300 text-lg leading-relaxed',
@@ -100,7 +101,7 @@ const ProjectDetail = ({ project, content }: ProjectDetailProps) => {
           {mounted && (
             <ReactMarkdown 
               remarkPlugins={[remarkGfm]}
-              rehypePlugins={[rehypeRaw]} // [수정] HTML 태그 허용 설정 추가
+              rehypePlugins={[rehypeRaw, rehypeSlug] as any} // [핵심] HTML 태그 허용(rehypeRaw) + 목차 ID 생성(rehypeSlug)
               components={{
                 h1: (props) => <h1 className={MarkdownStyles.h1} {...props} />,
                 h2: (props) => <h2 className={MarkdownStyles.h2} {...props} />,
@@ -110,13 +111,15 @@ const ProjectDetail = ({ project, content }: ProjectDetailProps) => {
                 ol: (props) => <ol className={MarkdownStyles.ol} {...props} />,
                 li: (props) => <li className="pl-2" {...props} />,
                 blockquote: (props) => <blockquote className={MarkdownStyles.blockquote} {...props} />,
+                // HTML <img> 태그와 마크다운 이미지 모두 처리
                 img: ({ node, ...props }) => (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img 
                       className={MarkdownStyles.img} 
                       {...props} 
                       alt={props.alt || "Project Image"} 
-                      style={{ maxWidth: props.width || '100%' }} // HTML의 width 속성 대응
+                      // width 속성이 있으면 우선 적용, 없으면 100%
+                      style={{ maxWidth: props.width ? props.width : '100%' }} 
                     />
                 ),
                 a: (props) => <a className={MarkdownStyles.a} {...props} />,
@@ -126,6 +129,8 @@ const ProjectDetail = ({ project, content }: ProjectDetailProps) => {
                 code: ({inline, ...props}: any) => inline 
                   ? <code className={MarkdownStyles.code} {...props} /> 
                   : <code {...props} />,
+                // HTML <strong> 태그를 위한 스타일 적용
+                strong: (props) => <strong className={MarkdownStyles.strong} {...props} />
               }}
             >
               {content}

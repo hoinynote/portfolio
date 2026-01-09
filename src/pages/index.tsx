@@ -39,8 +39,8 @@ const Home: NextPage<DataProps> = ({
               데이터의 무게를 견디는 <br />
               <span className="text-blue-600 dark:text-blue-500">단단한 엔지니어링</span>
             </h1>
-            <p className="text-xl text-zinc-600 dark:text-zinc-400 font-medium">
-               비즈니스의 성장을 견인하는 Data Engineer 유호인입니다.
+            <p className="text-xl md:text-2xl text-gray-500 dark:text-gray-400 font-medium mt-4">
+              보이지 않는 곳에서 데이터의 흐름을 빈틈없이 연결하는 엔지니어가 되고 싶습니다.
             </p>
           </div>
 

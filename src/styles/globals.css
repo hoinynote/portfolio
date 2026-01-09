@@ -1,63 +1,56 @@
+/* 1. 프리텐다드(Pretendard) 폰트 불러오기 (웹 폰트) */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* 2. 전체 기본 스타일 설정 */
 @layer base {
-  h1 {
-    @apply font-semibold text-5xl py-2;
+  html {
+    font-family: "Pretendard Variable", Pretendard, -apple-system,
+      BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
+      "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji",
+      "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    scroll-behavior: smooth; /* 목차 이동 시 부드럽게 */
   }
 
-  h2 {
-    @apply font-semibold text-4xl py-2;
+  body {
+    @apply bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100;
+    
+    /* 가독성 핵심 설정 */
+    line-height: 1.75;        /* 줄 간격을 넉넉하게 (기본 1.5 -> 1.75) */
+    word-break: keep-all;     /* 한글 단어 중간 끊김 방지 (매우 중요) */
+    letter-spacing: -0.015em; /* 자간을 살짝 좁혀서 단단한 느낌 주기 */
+    -webkit-font-smoothing: antialiased; /* 폰트를 더 선명하게 */
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  h3 {
-    @apply font-semibold text-3xl;
+  /* 제목 태그들은 줄바꿈 기준을 조금 더 타이트하게 */
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-gray-900 dark:text-white font-bold;
+    line-height: 1.3;
+    letter-spacing: -0.025em;
+    margin-bottom: 0.75em;
   }
+}
 
-  h4 {
-    @apply font-semibold text-2xl;
-  }
-  a {
-    @apply cursor-pointer hover:cursor-pointer;
-  }
+/* 3. 마크다운 내부 스타일 상세 조정 (Prose 보정) */
+.prose p {
+  margin-bottom: 1.5em; /* 문단 간 간격 확보 */
+}
 
-  .markdown a {
-    @apply font-mono bg-GRAY_HEAVY dark:bg-white py-[2px] px-1.5 rounded-md text-xs text-white dark:text-BLACK hover:bg-BLACK dark:hover:bg-GRAY_HEAVY;
-  }
+.prose li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
 
-  .markdown h1,
-  .markdown h2 {
-    @apply pt-4 pb-2;
-  }
+.prose strong {
+  font-weight: 700;
+  color: #2563eb; /* 강조색: 파란색 (다크모드 대응은 Tailwind 클래스로 처리됨) */
+}
 
-  .markdown h3,
-  .markdown h4 {
-    @apply pt-4 pb-2;
-  }
-
-  strong {
-    @apply font-semibold;
-  }
-
-  em {
-    @apply text-GRAY_HEAVY;
-  }
-
-  code {
-    @apply bg-GRAY_LIGHT dark:bg-GRAY_EXTRAHEAVY  py-[2px] px-1.5 rounded-md text-xs font-medium text-PRIMARY_HEAVY dark:text-PRIMARY;
-  }
-
-  blockquote {
-    @apply bg-GRAY_LIGHT py-4 px-6 my-2 rounded-md w-full dark:bg-GRAY_EXTRAHEAVY;
-  }
-
-  ul,
-  ol {
-    @apply flex flex-col gap-2 py-2 ml-4 list-outside list-disc;
-  }
-
-  li ul {
-    @apply pt-2;
-  }
+/* 다크모드에서의 strong 태그 색상 보정 */
+.dark .prose strong {
+  color: #60a5fa;
 }
