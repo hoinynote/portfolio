@@ -141,7 +141,7 @@
   "education": [
     { "id": 0, "name": "전남고등학교 졸업", "period": ["2014. 03", "2017. 02"] },
     { "id": 1, "name": "숭실대학교 산업정보시스템공학과 졸업", "period": ["2019. 03", "2025. 02"] },
-    { "id": 2, "name": "Microsoft Data School 1기 수료", "period": ["2024. 01", "2024. 06"] }
+    { "id": 2, "name": "Microsoft Data School 1기 수료", "period": ["2024. 04", "2024. 09"] }
   ],
   "certificate": [],
   "award": []
