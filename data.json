@@ -31,8 +31,8 @@
       },
       {
         "id": 3,
-        "title": "함께 성장하는 협업의 가치",
-        "description": "엔지니어링은 혼자 하는 것이 아니라 동료와 함께 시스템을 만들어가는 과정이라 생각합니다. 복잡한 로직일수록 명료한 문서화를 통해 팀원들과 지식을 공유하려 노력합니다. '내 코드가 동료의 시간을 아껴줄 수 있는가?'를 항상 고민하며, 유지보수가 쉬운 간결한 코드를 작성하는 것을 목표로 합니다."
+        "title": "팀의 효율을 높이는 서포터",
+        "description": "저의 엔지니어링이 동료들의 반복적인 수작업을 줄여줄 수 있는지를 항상 고민합니다. 복잡한 작업 흐름을 자동화하여 팀원들이 본질적인 업무에 집중할 수 있도록 돕고, 꼼꼼한 문서화를 통해 개인의 노하우가 팀 전체의 자산이 되도록 지식 공유에 힘씁니다."
       }
     ],
     "markdown": ""
@@ -82,33 +82,33 @@
       "role": "PM & MLOps Engineer"
     },
     {
-      "id": 3,
-      "name": "권역 외상 센터 입지 선정 및 닥터헬기 필요성 분석",
-      "description": "공간 데이터 분석(GIS)과 P-Median 알고리즘을 활용하여 골든타임 확보를 위한 최적의 중증 외상 센터 입지를 도출했습니다.",
-      "body": "중증 외상 환자의 골든타임 확보를 위해 의료 취약 지역을 분석하고 최적 입지를 제안한 프로젝트입니다.\n\n* **Spatial Analysis:** QGIS를 활용해 도로망, 인구 밀도, 응급 시설 등 이종 데이터를 결합하고 의료 취약 지역 히트맵(Heatmap) 시각화\n* **Optimization Modeling:** 환자 이송 시간 최소화를 목적함수로 하는 P-Median 모델을 수립하여 최적 후보지 선정\n* **Impact:** 기존 의료 시설의 접근성 사각지대를 해소할 수 있는 최적의 입지 후보지를 도출하여 공공 의료 정책 수립의 근거 마련",
-      "webUrl": "",
-      "repoUrl": "",
-      "isTeam": true,
-      "period": ["2023. 03", "2023. 06"],
-      "stack": ["R", "GIS", "Data Visualization"],
-      "imgSrc": "/images/project/3.png",
-      "member": "4인 팀 프로젝트",
-      "role": "Data Analyst"
-    },
+          "id": 3,
+          "name": "권역 외상 센터 입지 선정 및 닥터헬기 필요성 분석",
+          "description": "데이터 기반의 최적화 알고리즘(P-Median)을 활용하여 골든타임 확보를 위한 최적의 중증 외상 센터 입지를 도출했습니다.",
+          "body": "중증 외상 환자의 골든타임 확보를 위해 의료 취약 지역을 수치적으로 식별하고 최적 입지를 제안한 프로젝트입니다.\n\n* **Data Analysis:** 기존 응급 의료 시설 위치와 인구 밀도 데이터를 수집 및 전처리하여 의료 취약 지역을 데이터로 식별\n* **Optimization Modeling:** 환자 이송 시간 최소화를 목적함수로 하는 P-Median 모델을 수립하여 최적 후보지 선정\n* **Impact:** 기존 의료 시설의 접근성 사각지대를 해소할 수 있는 최적의 입지 후보지를 도출하여 공공 의료 정책 수립의 근거 마련",
+          "webUrl": "",
+          "repoUrl": "",
+          "isTeam": true,
+          "period": ["2023. 03", "2023. 06"],
+          "stack": ["R", "Data Visualization", "Optimization"],
+          "imgSrc": "/images/project/3.png",
+          "member": "4인 팀 프로젝트",
+          "role": "Data Analyst"
+        },
     {
-      "id": 2,
-      "name": "무인판매점 도난방지 프로세스 개선 모델링",
-      "description": "무인 매장의 도난 대응 프로세스를 분석하고, IoT 센서와 자동 알림 시스템을 도입하여 도난 대응 시간을 단축하는 TO-BE 프로세스를 설계했습니다.",
-      "body": "무인 매장의 도난 사건 대응 절차의 비효율을 분석하고 자동화된 대응 모델을 설계한 프로젝트입니다.\n\n* **Process Analysis:** Bizagi를 활용해 CCTV 모니터링부터 신고까지의 AS-IS 프로세스를 시각화하고, 수동 대응으로 인한 병목 구간 식별\n* **Process Re-engineering:** IoT 센서 감지 시 자동 알림이 발송되는 TO-BE 프로세스를 BPMN 표준으로 설계하여 대응 자동화 모델 제시\n* **Impact:** 도난 상황 발생 시 관리자의 즉각적인 인지 및 신고가 가능한 프로세스를 정립하여 매장 운영 리스크 감소 방안 제시",
-      "webUrl": "",
-      "repoUrl": "",
-      "isTeam": true,
-      "period": ["2022. 10", "2022. 11"],
-      "stack": ["Bizagi", "Process Mining", "BPMN"],
-      "imgSrc": "/images/project/2.png",
-      "member": "4인 팀 프로젝트",
-      "role": "Process Consultant"
-    },
+          "id": 2,
+          "name": "무인판매점 도난방지 프로세스 개선 모델링",
+          "description": "무인 매장의 도난 대응 프로세스를 분석하고, 도난 감지 시 점주에게 즉시 알림이 가는 자동화 프로세스(TO-BE)를 설계했습니다.",
+          "body": "무인 매장의 도난 사건 대응 절차의 비효율을 분석하고, Bizagi를 활용해 대응 시간을 단축하는 자동화 모델을 설계한 프로젝트입니다.\n\n* **Process Analysis:** AS-IS 프로세스 분석을 통해, 도난 발생 후 CCTV 확인 및 신고까지의 과정에서 발생하는 병목 현상과 사후 대응의 한계를 식별\n* **Process Automation:** 도난 감지 시스템과 관리자 앱이 연동되는 TO-BE 프로세스를 BPMN으로 설계하여, 이상 징후 시 경고 알림이 자동 발송되는 로직 구현\n* **Impact:** 시뮬레이션을 통해 도난 상황 인지부터 대응까지의 리드 타임을 단축하고, 매장 운영 리스크를 최소화하는 프로세스 정립",
+          "webUrl": "",
+          "repoUrl": "",
+          "isTeam": true,
+          "period": ["2022. 10", "2022. 11"],
+          "stack": ["Bizagi", "BPMN", "Process Simulation"],
+          "imgSrc": "/images/project/2.png",
+          "member": "4인 팀 프로젝트",
+          "role": "Process Consultant"
+        },
     {
       "id": 1,
       "name": "설문조사 기반 당뇨병 예측 ML 모델 구축",
@@ -124,19 +124,19 @@
       "role": "ML Engineer"
     },
     {
-      "id": 0,
-      "name": "중고 거래 플랫폼 DB 설계",
-      "description": "대규모 트래픽을 고려하여 중고 거래 플랫폼의 핵심 로직을 모델링하고, 인덱스 최적화를 통해 쿼리 성능을 강화했습니다.",
-      "body": "중고 거래 서비스의 요구사항을 분석하여 데이터 무결성과 성능을 고려한 RDB를 설계했습니다.\n\n* **DB Modeling:** 요구사항 분석을 통해 20개 이상의 엔티티를 도출하고 제3정규형(3NF)을 적용해 데이터 무결성 확보\n* **Query Optimization:** 빈번한 조회 쿼리(검색, 필터링)에 맞춰 복합 인덱스를 설계하고 실행 계획 분석으로 Full Scan 최소화\n* **Impact:** 주요 비즈니스 시나리오에 대한 SQL 쿼리 20종을 검증하고 서비스 확장을 고려한 유연한 스키마 구조 확보",
-      "webUrl": "",
-      "repoUrl": "",
-      "isTeam": true,
-      "period": ["2021. 10", "2021. 11"],
-      "stack": ["SQL Server", "ERD", "Database Design"],
-      "imgSrc": "/images/project/0.png",
-      "member": "4인 팀 프로젝트",
-      "role": "Database Architect"
-    }
+          "id": 0,
+          "name": "중고 거래 플랫폼 DB 설계",
+          "description": "중고 거래 서비스의 핵심 기능인 회원, 상품, 거래, 채팅 기능을 구현하기 위한 관계형 데이터베이스(RDB)를 설계했습니다.",
+          "body": "실제 서비스되고 있는 중고 거래 플랫폼의 기능을 벤치마킹하여, 데이터의 흐름을 구조화하고 스키마를 설계한 프로젝트입니다.\n\n* **Requirement Analysis:** 서비스 흐름을 분석하여 회원, 상품, 거래 내역, 채팅방 등 데이터 관리가 필요한 핵심 엔티티 식별\n* **ERD Design:** 엔티티 간의 관계(1:1, 1:N)를 정의하여 논리적/물리적 모델링을 수행하고 ERD(Entity Relationship Diagram) 작성\n* **SQL Implementation:** 테이블 생성을 위한 DDL 작성 및 주요 기능(상품 등록, 거래 성사 등) 구현을 위한 DML 쿼리 작성 및 검증",
+          "webUrl": "",
+          "repoUrl": "",
+          "isTeam": true,
+          "period": ["2021. 10", "2021. 11"],
+          "stack": ["SQL Server", "ERD", "Database Design"],
+          "imgSrc": "/images/project/0.png",
+          "member": "4인 팀 프로젝트",
+          "role": "Database Architect"
+        }
   ],
   "education": [
     { "id": 0, "name": "전남고등학교 졸업", "period": ["2014. 03", "2017. 02"] },
